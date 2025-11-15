@@ -45,7 +45,7 @@ public class PanelMapaVisualizar extends JPanel
                 int y = r.getY();
 
                 g2d.setColor(Color.red);
-                g2d.fillOval( x - 3, y - 3, 7, 7 );
+                g2d.fillOval(x - 3, y - 3, 7, 7);
 
                 g2d.setColor(Color.black);
                 g2d.drawString(r.getNombre(), x + 8, y - 5);

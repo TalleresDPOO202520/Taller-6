@@ -52,8 +52,6 @@ public class VentanaAgregarRestaurante extends JFrame
 
         add(panelSur, BorderLayout.SOUTH);
 
-        
-
         // Termina de configurar la ventana
         pack( );
         setLocationRelativeTo( null );

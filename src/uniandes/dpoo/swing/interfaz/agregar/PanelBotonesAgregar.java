@@ -39,6 +39,7 @@ public class PanelBotonesAgregar extends JPanel implements ActionListener
         butNuevo.setActionCommand(CREAR);
         butNuevo.addActionListener(this);
         add(butNuevo);
+        
         // Agrga el boton para cerrar la ventana
         butCerrar = new JButton("Cerrar");
         butCerrar.setActionCommand(CERRAR);

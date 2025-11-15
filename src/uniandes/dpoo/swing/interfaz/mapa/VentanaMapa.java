@@ -80,7 +80,6 @@ public class VentanaMapa extends JFrame implements ActionListener
 
         add(panelOpciones, BorderLayout.SOUTH);
 
-
         // Termina de configurar la ventana y la muestra
         pack( );
         setResizable( false );

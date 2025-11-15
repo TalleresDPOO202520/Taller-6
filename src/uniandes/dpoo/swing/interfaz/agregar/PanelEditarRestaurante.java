@@ -33,18 +33,15 @@ public class PanelEditarRestaurante extends JPanel
     	JLabel labelNombre = new JLabel("Nombre:");
     	txtNombre = new JTextField(10);
 
-
         // Crea el selector para la calificación con una etiqueta al frente
     	JLabel labelCalificacion = new JLabel("Calificación:");
     	String[] opcionesCalificacion = { "1", "2", "3", "4", "5" };
     	cbbCalificacion = new JComboBox<>(opcionesCalificacion);
 
-
         // Crea el selector para indicar si ya ha sido visitado, con una etiqueta al frente
     	JLabel labelVisitado = new JLabel("Visitado:");
     	String[] opcionesVisitado = { "Sí", "No" };
     	cbbVisitado = new JComboBox<>(opcionesVisitado);
-
 
         // Agregar todos los elementos al panel
     	add(labelNombre);
@@ -53,8 +50,6 @@ public class PanelEditarRestaurante extends JPanel
     	add(cbbCalificacion);
     	add(labelVisitado);
     	add(cbbVisitado);
-
-
     }
 
     /**
