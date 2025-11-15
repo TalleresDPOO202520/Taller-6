@@ -10,6 +10,7 @@ import uniandes.dpoo.swing.interfaz.mapa.VentanaMapa;
 import uniandes.dpoo.swing.mundo.Diario;
 import uniandes.dpoo.swing.mundo.Restaurante;
 
+
 @SuppressWarnings("serial")
 public class VentanaPrincipal extends JFrame
 {
@@ -86,7 +87,10 @@ public class VentanaPrincipal extends JFrame
      */
     public void mostrarVentanaMapa( )
     {
-        // TODO completar mostrarVentanaMapa
+    	if(ventanaMapa == null || !ventanaMapa.isVisible()){
+            ventanaMapa = new VentanaMapa(this, mundo.getRestaurantes(true));
+            ventanaMapa.setVisible(true);
+        }
     }
 
     /**
@@ -99,7 +103,9 @@ public class VentanaPrincipal extends JFrame
      */
     public void agregarRestaurante( String nombre, int calificacion, int x, int y, boolean visitado )
     {
-        // TODO completar agregarRestaurante
+    	Restaurante nuevo = new Restaurante(nombre, calificacion, x, y, visitado);
+        mundo.agregarRestaurante(nuevo);
+        actualizarRestaurantes();
     }
 
     /**
@@ -120,7 +126,13 @@ public class VentanaPrincipal extends JFrame
     private void actualizarRestaurantes( )
     {
         List<Restaurante> todos = this.mundo.getRestaurantes( true );
-        // TODO completar actualizarRestaurantes
+        pLista.actualizarRestaurantes( todos );
+
+        if(!todos.isEmpty()){
+            Restaurante seleccionado = todos.get( todos.size()-1);
+            pLista.seleccionarRestaurante(seleccionado);
+            pDetalles.actualizarRestaurante(seleccionado);
+        }
     }
 
     /**
